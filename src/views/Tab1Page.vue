@@ -13,11 +13,15 @@
       </ion-header>
 
       <ExploreContainer name="Tab 1 page" />
+
+      <ion-button :router-link="'/tabs/tab2'">Go to Tab2 (full path)</ion-button>
+      <ion-button :router-link="'tab2'">Go to Tab2 (relative path)</ion-button>
+
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
 </script>
