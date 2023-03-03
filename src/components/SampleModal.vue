@@ -26,12 +26,12 @@
                 </ion-buttons>
             </ion-toolbar>
         </ion-header>
-    <ion-content class="ion-padding">
-        <ion-card>
-            <ion-card-content>
-                Info goes here
-            </ion-card-content>
-        </ion-card>
-    </ion-content>
+        <ion-content class="ion-padding">
+            <ion-card>
+                <ion-card-content>
+                    Info goes here
+                </ion-card-content>
+            </ion-card>
+        </ion-content>
     </ion-page>
 </template>
