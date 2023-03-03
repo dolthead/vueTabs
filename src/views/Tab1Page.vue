@@ -5,17 +5,16 @@ import ExploreContainer from '@/components/ExploreContainer.vue';
 import SampleModal from '@/components/SampleModal.vue';
 
 const presentModal = async () => {
-  const modal = await modalController.create({
-      component: SampleModal,
-      breakpoints: [0, 0.65],
-      initialBreakpoint: 0.65,
-  });
+  const modal = await modalController.create({ component: SampleModal });
+
+  // ionic modal events are registered here, vue component events are registered in the SampleModal component
   modal.addEventListener("will-present",() => {
       console.log("will-present");
   });
   modal.addEventListener("did-present",() => {
       console.log("did-present");
   });
+
   return modal.present();
 }
 </script>

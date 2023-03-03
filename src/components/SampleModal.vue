@@ -1,15 +1,21 @@
 <script lang="ts" setup>
     import { modalController, IonPage, IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, IonIcon, IonContent, IonCard, IonCardContent } from "@ionic/vue";
     import { closeCircleOutline } from 'ionicons/icons';
-    import { onBeforeMount, onMounted } from "vue";
+    import { onBeforeMount, onMounted, onUnmounted } from "vue";
 
+    console.log('setup');
+
+    // vue component events are registered here, ionic modal events are registered in the Tab1Page parent component
     onBeforeMount(() => { // when you want to do something before the component is mounted
         console.log('onBeforeMount');
     });
-
     onMounted(() => { // when you need access to the rendered DOM
         console.log('onMounted');
     });
+    onUnmounted(() => { // when you need access to the rendered DOM
+        console.log('onUnmounted');
+    });
+
 </script>
 
 <template>
