@@ -10,6 +10,12 @@ const presentModal = async () => {
       breakpoints: [0, 0.65],
       initialBreakpoint: 0.65,
   });
+  modal.addEventListener("will-present",() => {
+      console.log("will-present");
+  });
+  modal.addEventListener("did-present",() => {
+      console.log("did-present");
+  });
   return modal.present();
 }
 </script>
